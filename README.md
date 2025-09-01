@@ -18,3 +18,6 @@ Create, edit, publish and manage posts. All data is stored locally in the browse
 - CSS3
 - Vanilla JavaScript
 - [marked.js](https://marked.js.org/) for Markdown parsing
+
+<img src="Movie App/pictures/MovieApp.png" alt="Blok CMS preview" width="1000">
+
