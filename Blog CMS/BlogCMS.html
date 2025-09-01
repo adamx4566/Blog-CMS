@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog CMS</title>
+  <link rel="stylesheet" href="BlogCMS.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Blog CMS</h1>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Search posts...">
+        <button id="newBtn" class="btn">New Post</button>
+        <button id="exportBtn" class="btn">Export</button>
+        <input id="importFile" type="file" accept="application/json" style="display:none">
+        <button id="importBtn" class="btn">Import</button>
+      </div>
+
+      <div id="postsList" class="posts-list"></div>
+    </aside>
+
+    <main class="editor-area">
+      <header class="editor-header">
+        <input id="titleInput" class="title-input" placeholder="Post title">
+        <div class="meta">
+          <input id="tagsInput" placeholder="tags (comma separated)" class="tags-input">
+          <label class="switch">
+            <input id="publishedCheckbox" type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <span class="pub-label" id="pubLabel">Draft</span>
+        </div>
+      </header>
+
+      <section class="editor-main">
+        <div class="left-column">
+          <textarea id="contentInput" class="content-input" placeholder="Write your post in Markdown..."></textarea>
+          <div class="editor-actions">
+            <button id="saveBtn" class="btn primary">Save</button>
+            <button id="deleteBtn" class="btn danger">Delete</button>
+            <button id="viewBtn" class="btn">Open Post</button>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <h2>Preview</h2>
+          <div id="preview" class="preview"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="BlogCMS.js"></script>
+</body>
+</html>
